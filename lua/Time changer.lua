@@ -1,3 +1,4 @@
+-- for Roblox
 -- insert in ServerScriptService
 
 local dayLength = 24

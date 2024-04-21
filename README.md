@@ -1,13 +1,16 @@
 # simpleProjects
 
-- folders
-  - [batch](./batch)
-  - [markdown](./markdown)
-  - [python](./python)
+- projects
+  - [[2] batch](./batch)
+  - [[2] markdown](./markdown)
+  - [[6] python](./python)
+  - [[3] lua](./lua)
 
-## Installing libraries
+## Setup before running scripts
 
-run in console: `pip install -r requirements.txt`
+- Create folder `input` in `/src/`
+- Create folder `output` in `/src/`
+- run in console: `pip install -r requirements.txt`
 
 ### Attention
 
