@@ -1,10 +1,10 @@
 # simpleProjects
 
 - projects
-  - [[2] batch](./batch)
-  - [[2] markdown](./markdown)
-  - [[6] python](./python)
-  - [[3] lua](./lua)
+  - [batch](./batch)
+  - [markdown](./markdown)
+  - [python](./python)
+  - [lua](./lua)
 
 ## Setup before running scripts
 
