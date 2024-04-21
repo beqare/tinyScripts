@@ -10,7 +10,7 @@
 
 - Create folder `input` in `/src/`
 - Create folder `output` in `/src/`
-- run in console: `pip install -r requirements.txt`
+- run in `/src/` console: `pip install -r requirements.txt`
 
 ### Attention
 
