@@ -1,7 +1,9 @@
 # simpleProjects
 
-- python
-  - [algorythm](./python/algorythm.pyw)
+- folders
+  - [batch](./batch)
+  - [markdown](./markdown)
+  - [python](./python)
 
 ## Installing libraries
 
