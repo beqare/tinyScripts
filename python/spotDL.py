@@ -1,6 +1,6 @@
 import subprocess
 import os
-import spotDL
+
 
 def run_spotdl(url):
     os.chdir("./spotDL/songs")
