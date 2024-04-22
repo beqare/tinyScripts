@@ -3,13 +3,13 @@ import os
 
 
 def run_spotdl(url):
-    os.chdir("../src/download")
+    os.chdir("../src/output")
     subprocess.run(["spotdl", url])
 
 
 def main():
-    if not os.path.exists("../src/download"):
-        os.makedirs("../src/download")
+    if not os.path.exists("../src/output"):
+        os.makedirs("../src/output")
 
     while True:
         url = input("Song-URL: ")
@@ -18,7 +18,6 @@ def main():
             break
 
         run_spotdl(url)
-        print("finish")
 
 
 if __name__ == "__main__":
