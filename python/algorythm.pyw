@@ -3,7 +3,6 @@ import subprocess
 import os
 
 subprocess.run(["python", "../setup.py"])
-os.system("cls")
 
 window = turtle.Screen()
 window.title("Block Moving Game")

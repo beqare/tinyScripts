@@ -6,7 +6,6 @@ import subprocess
 import os
 
 subprocess.run(["python", "../setup.py"])
-os.system("cls")
 
 defaultFps = 24
 defaultSpeed = 2.0

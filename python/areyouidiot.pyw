@@ -4,7 +4,7 @@ import subprocess
 import os
 
 subprocess.run(["python", "../setup.py"])
-os.system("cls")
+
 
 def show_popup():
     popup = tk.Toplevel(root)
@@ -12,10 +12,12 @@ def show_popup():
     label = tk.Label(popup, text="Thanks for Accepting")
     label.pack(padx=20, pady=20)
 
+
 def move_button(event):
     x = random.randint(0, 350)
     y = random.randint(0, 350)
     no_button.place(x=x, y=y)
+
 
 root = tk.Tk()
 root.title("@python.coder_")
