@@ -9,6 +9,7 @@ input_path = "./src/input"
 libraries = ["turtle", "pytube", "subprocess", "os", "tkinter", "random", "spotdl"]
 
 
+
 def create_dirs():
     os.makedirs(output_path, exist_ok=True)
     os.makedirs(input_path, exist_ok=True)
@@ -30,6 +31,11 @@ def install_libs():
         except subprocess.CalledProcessError as e:
             print(f"Error during installation: {e}")
 
+def clear_console():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 print("Setting up...")
 
@@ -37,3 +43,5 @@ create_dirs()
 install_libs()
 
 time.sleep(1)
+
+clear_console()

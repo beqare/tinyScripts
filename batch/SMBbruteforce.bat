@@ -4,7 +4,7 @@ color A
 echo.
 set /p ip="Enter IP Address: "
 set /p user="Enter Username: "
-set wordlist=../src/passlist.txt
+set wordlist=./src/passlist.txt
 
 set /a count=1
 for /f %%a in (%wordlist%) do (
