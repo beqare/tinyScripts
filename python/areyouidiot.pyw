@@ -1,5 +1,10 @@
 import tkinter as tk
 import random
+import subprocess
+import os
+
+subprocess.run(["python", "../setup.py"])
+os.system("cls")
 
 def show_popup():
     popup = tk.Toplevel(root)

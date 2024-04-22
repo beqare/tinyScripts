@@ -1,4 +1,9 @@
 import turtle
+import subprocess
+import os
+
+subprocess.run(["python", "../setup.py"])
+os.system("cls")
 
 col = ['darkred', 'red']
 

@@ -1,4 +1,9 @@
 from pytube import YouTube
+import subprocess
+import os
+
+subprocess.run(["python", "../setup.py"])
+os.system("cls")
 
 url = input("YouTube-Link: ")
 

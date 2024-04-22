@@ -1,6 +1,8 @@
 import subprocess
 import os
 
+subprocess.run(["python", "../setup.py"])
+os.system("cls")
 
 def run_spotdl(url):
     os.chdir("../src/output")
