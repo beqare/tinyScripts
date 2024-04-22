@@ -1,44 +1,42 @@
 import os
 import time
 import subprocess
+import importlib
 
-output = "./src/output"
-input = "./src/input"
+output_path = "./src/output"
+input_path = "./src/input"
 
-libraries = ["turtle", "pytube", "subprocess", "os", "tkinter", "random"]
+libraries = ["turtle", "pytube", "subprocess", "os", "tkinter", "random", "spotdl"]
 
+def create_dirs():
+    os.makedirs(output_path, exist_ok=True)
+    os.makedirs(input_path, exist_ok=True)
+    print("Directories created!")
 
-def create_directories():
-    if not os.path.exists(output):
-        os.makedirs(output)
+def install_libs():
+    missing_libs = []
 
-    if not os.path.exists(input):
-        os.makedirs(input)
+    for lib in libraries:
+        try:
+            importlib.import_module(lib)
+            print(f"{lib} is installed.")
+        except ImportError:
+            missing_libs.append(lib)
 
+    if missing_libs:
+        try:
+            subprocess.run(["pip", "install", *missing_libs], check=True)
+            print(f"Libraries installed: {', '.join(missing_libs)}")
+        except subprocess.CalledProcessError as e:
+            print(f"Error during installation: {e}")
+    else:
+        print("All libraries are already installed!")
 
-def install_libraries():
-    try:
-        subprocess.run(["pip", "install", *libraries], check=True)
-        print("libraries installed")
-    except subprocess.CalledProcessError as e:
-        print(f"Fail to install library: {e}")
-        return
+print("Setting up...")
 
-
-print("")
-print("Creating directories...")
-print("")
-
-create_directories()
-
-print("created...")
-
+create_dirs()
 time.sleep(1)
+install_libs()
 
-print("")
-print("Installing libraries...")
-print("")
-
-install_libraries()
-
-print("installed")
+print("\nSetup complete!")
+time.sleep(10)
