@@ -13,10 +13,8 @@ def main():
 
     while True:
         url = input("Song-URL: ")
-
         if url.lower() == "exit":
             break
-
         run_spotdl(url)
 
 
