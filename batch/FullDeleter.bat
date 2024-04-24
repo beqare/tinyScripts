@@ -6,7 +6,7 @@ setlocal
 
 echo 1. Admin
 echo 2. Non-Admin
-set /p choice=Ihre Wahl: 
+set /p choice=Choose: 
 
 if "%choice%" == "1" goto admin
 if "%choice%" == "2" goto nonadmin

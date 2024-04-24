@@ -6,8 +6,18 @@ import importlib
 output_path = "./src/output"
 input_path = "./src/input"
 
-libraries = ["turtle", "pytube", "subprocess", "os", "tkinter", "random", "spotdl"]
-
+libraries = [
+    "turtle",
+    "pytube",
+    "subprocess",
+    "os",
+    "tkinter",
+    "random",
+    "spotdl",
+    "json",
+    "requests",
+    "asyncio",
+]
 
 
 def create_dirs():
@@ -31,11 +41,13 @@ def install_libs():
         except subprocess.CalledProcessError as e:
             print(f"Error during installation: {e}")
 
+
 def clear_console():
-    if os.name == 'nt':
-        os.system('cls')
+    if os.name == "nt":
+        os.system("cls")
     else:
-        os.system('clear')
+        os.system("clear")
+
 
 print("Setting up...")
 
