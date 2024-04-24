@@ -4,11 +4,11 @@ import os
 
 subprocess.run(["python", "../setup.py"])
 
-col = ['darkred', 'red']
+col = ["darkred", "red"]
 
 t = turtle.Turtle()
 screen = turtle.Screen()
-screen.bgcolor('black')
+screen.bgcolor("black")
 t.speed(100)
 
 for i in range(1000):
