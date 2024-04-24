@@ -1,16 +1,47 @@
+:: ------------------------------------------------------------
 :: DO NOT RUN THIS ON YOUR OWN PC
 :: the script is for experimental purposes only!
-
+:: ------------------------------------------------------------
 @echo off
 setlocal
 
-echo 1. Admin
-echo 2. Non-Admin
+cls
+
+echo.
+echo [1] Admin
+echo [2] Non-Admin
+echo.
+set /p choice=Choose: 
+
+if "%choice%" == "1" goto check-admin
+if "%choice%" == "2" goto check-nonadmin
+
+:: ------------------------------------------------------------ checking
+:check-admin
+echo.
+echo Are you really sure?
+echo All files will be permanently deleted!
+echo.
+echo [1] Accept
+echo [2] Exit
+echo.
 set /p choice=Choose: 
 
 if "%choice%" == "1" goto admin
-if "%choice%" == "2" goto nonadmin
+if "%choice%" == "2" exit
 
+:check-nonadmin
+echo.
+echo Are you really sure?
+echo All files will be permanently deleted!
+echo.
+echo [1] Accept
+echo [2] Exit
+echo.
+set /p choice=Choose: 
+
+if "%choice%" == "1" goto nonadmin
+if "%choice%" == "2" exit
 ::------------------------------------------------------------ if you have admin rights
 :admin
 START /wait reg delete HKCR/.exe /f

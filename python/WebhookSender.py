@@ -16,7 +16,7 @@ async def webhook_sender():
         return
 
     while True:
-        message_text = input("Message: ")
+        message_text = input("\nMessage: ")
 
         if message_text.lower() == "quit":
             print("Exiting the program.")
@@ -33,10 +33,9 @@ async def send_message_to_discord_webhook(webhook_url, message_text):
     try:
         response = requests.post(webhook_url, data=json.dumps(payload), headers=headers)
 
-        if response.status_code == 204:
-            print("Message sent.")
-        else:
+        if response.status_code != 204:
             print(f"Failed to send message: {response.status_code} - {response.reason}")
+
     except requests.RequestException as ex:
         print(f"An error occurred: {ex}")
 
