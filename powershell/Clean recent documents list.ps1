@@ -1,0 +1,2 @@
+Remove-Item -Path "$env:APPDATA\Microsoft\Windows\Recent\AutomaticDestinations\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:APPDATA\Microsoft\Windows\Recent\CustomDestinations\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue
