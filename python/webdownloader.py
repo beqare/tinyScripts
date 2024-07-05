@@ -62,7 +62,8 @@ def main():
         print("[2] Audio")
         print("[3] Video")
         print("")
-        print("[0] Exit")
+        print("[?] url")
+        print("[!] Exit")
         print("")
         choice = input("input » ")
 
@@ -72,7 +73,9 @@ def main():
             tag_name, attribute = 'audio', 'src'
         elif choice == "3":
             tag_name, attribute = 'video', 'src'
-        elif choice == "4":
+        elif choice == "?":
+            main()
+        elif choice == "!":
             break
         else:
             clear_screen()
