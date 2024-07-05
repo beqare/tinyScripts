@@ -1,11 +1,15 @@
 import subprocess
 import os
 
+# setup
 subprocess.run(["python", "../setup.py"])
 
+output_path = "./src/output"
+input_path = "./src/input"
 
+## main
 def run_spotdl(url):
-    os.chdir("./src/output")
+    os.chdir(output_path)
     subprocess.run(["spotdl", url])
 
 

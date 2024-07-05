@@ -20,6 +20,7 @@ libraries = [
     "datetime",
     "statistics",
     "time",
+    "beautifulsoup4"
 ]
 
 

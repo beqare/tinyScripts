@@ -3,8 +3,13 @@ import json
 import subprocess
 import asyncio
 
+# setup
 subprocess.run(["python", "../setup.py"])
 
+output_path = "./src/output"
+input_path = "./src/input"
+
+## main
 
 async def webhook_sender():
     webhook_url = input("Enter Webhook URL: ")

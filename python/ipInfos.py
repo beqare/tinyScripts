@@ -1,7 +1,13 @@
 import requests
 import subprocess
 
+# setup
 subprocess.run(["python", "../setup.py"])
+
+output_path = "./src/output"
+input_path = "./src/input"
+
+## main
 
 
 def show_ip_address():

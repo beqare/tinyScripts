@@ -5,7 +5,13 @@ from tkinter import simpledialog, messagebox
 import subprocess
 import os
 
+# setup
 subprocess.run(["python", "../setup.py"])
+
+output_path = "./src/output"
+input_path = "./src/input"
+
+## main
 
 defaultFps = 24
 defaultSpeed = 2.0
@@ -30,8 +36,8 @@ def mp4_to_gif(mp4_file, gif_file, fps=defaultFps, speed=defaultSpeed):
         messagebox.showerror("Error", f"Error by converting {mp4_file} to GIF: {e}")
 
 
-mp4_dir = "../src/input/"
-gif_dir = "../src/output/"
+mp4_dir = input_path
+gif_dir = output_path
 
 mp4_files = [
     os.path.join(mp4_dir, file) for file in os.listdir(mp4_dir) if file.endswith(".mp4")

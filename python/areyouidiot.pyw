@@ -3,9 +3,13 @@ import random
 import subprocess
 import os
 
+# setup
 subprocess.run(["python", "../setup.py"])
 
+output_path = "./src/output"
+input_path = "./src/input"
 
+## main
 def show_popup():
     popup = tk.Toplevel(root)
     popup.title("Popup")
