@@ -56,7 +56,8 @@
 
 ## How to get any Fortnite username
 
-1. Copy this: ﱞ
+1. Copy this:
+``` ﱞ```
 2. Go to <https://www.epicgames.com/account/personal>
 3. Click on the pencil next to your username
 4. Type in New username your wish username like this "Fﱞ ortnite"
